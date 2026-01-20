@@ -80,6 +80,14 @@ body {
     color: var(--primary-color);
     text-decoration: none;
     letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    height: 40px;
+    width: auto;
+    display: block;
 }
 
 .nav-menu {
@@ -173,14 +181,10 @@ section {
     border-radius: 8px;
     padding: var(--spacing-md);
     margin-bottom: var(--spacing-lg);
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.12);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.12);
-}
 
 .project-header {
     display: grid;
@@ -194,18 +198,18 @@ section {
     width: 100%;
 }
 
+
 .project-image-placeholder {
     width: 100%;
     aspect-ratio: 16 / 9;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border-radius: 6px;
+    border-radius: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     font-size: 1.2rem;
     font-weight: 500;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .project-image {
@@ -215,18 +219,6 @@ section {
     object-fit: cover;
     border-radius: 6px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.project-2 {
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-}
-
-.project-3 {
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-}
-
-.project-4 {
-    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
 }
 
 .project-info {
@@ -247,6 +239,8 @@ section {
     color: var(--text-secondary);
     font-size: 0.95rem;
     margin-bottom: var(--spacing-sm);
+    font-weight: 500;
+    letter-spacing: 0.02em;
 }
 
 .project-links {
@@ -255,21 +249,51 @@ section {
     flex-wrap: wrap;
 }
 
-.project-link {
+.project-link,
+.contact-link {
     display: inline-block;
-    padding: 0.6rem 1.5rem;
+    padding: 0.7rem 1.8rem;
     border: 2px solid var(--accent-color);
     color: var(--accent-color);
     text-decoration: none;
-    border-radius: 4px;
-    font-weight: 500;
+    border-radius: 6px;
+    font-weight: 600;
     font-size: 0.9rem;
     transition: all 0.3s ease;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
 }
 
-.project-link:hover {
-    background-color: var(--accent-color);
+.project-link::before,
+.contact-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-hover) 100%);
+    transition: left 0.3s ease;
+    z-index: -1;
+}
+
+.project-link:hover,
+.contact-link:hover {
     color: white;
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 129, 195, 0.25);
+}
+
+.project-link:hover::before,
+.contact-link:hover::before {
+    left: 0;
+}
+
+.project-link:active,
+.contact-link:active {
+    transform: translateY(0);
 }
 
 .project-rationale {
@@ -287,6 +311,18 @@ section {
 
 .project-rationale p:last-child {
     margin-bottom: 0;
+}
+
+.project-2 {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.project-3 {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.project-4 {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
 }
 
 /* About Section */
@@ -343,7 +379,7 @@ section {
 
 /* Contact Section */
 .contact {
-    background-color: var(--bg-light);
+    background-color: #e6f2f4;
     text-align: center;
 }
 
@@ -366,20 +402,9 @@ section {
 }
 
 .contact-link {
-    color: var(--accent-color);
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1.1rem;
-    padding: 0.8rem 1.5rem;
-    border: 2px solid var(--accent-color);
-    border-radius: 4px;
-    transition: all 0.3s ease;
+    background-color: transparent;
 }
 
-.contact-link:hover {
-    background-color: var(--accent-color);
-    color: white;
-}
 
 /* Footer */
 .footer {
@@ -413,8 +438,16 @@ section {
         grid-template-columns: 1fr;
     }
     
+    .project-visual {
+        order: 2;
+    }
+    
     .project-info {
-        order: -1;
+        order: 1;
+    }
+    
+    .project-image {
+        height: 300px;
     }
     
     .about-content {

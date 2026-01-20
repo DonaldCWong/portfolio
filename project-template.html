@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="[PROJECT_NAME] - Project detail page">
+    <title>[PROJECT_NAME] | Donald Wong Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project-page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">[BRAND_LOGO_TEXT]</a>
+            <ul class="nav-menu">
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Project Header / Hero -->
+    <section class="project-hero">
+        <div class="container">
+            <div class="project-hero-content">
+                <div class="project-breadcrumb">
+                    <a href="index.html#projects" class="breadcrumb-link">← Back to Projects</a>
+                </div>
+                
+                <div class="project-header-info">
+                    <div class="project-title-section">
+                        <h1 class="project-page-title">[PROJECT_NAME]</h1>
+                        <p class="project-subtitle">[PROJECT_SUBTITLE]</p>
+                    </div>
+                    
+                    <div class="project-meta">
+                        <div class="project-tags-list">
+                            <span class="project-tag">[TAG_1]</span>
+                            <span class="project-tag">[TAG_2]</span>
+                            <span class="project-tag">[TAG_3]</span>
+                        </div>
+                        <div class="project-meta-info">
+                            <span class="meta-item">[PROJECT_DATE]</span>
+                            <span class="meta-divider">•</span>
+                            <span class="meta-item">[PROJECT_TYPE]</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Project Visual -->
+                <div class="project-hero-image">
+                    <img src="/assets/[HERO_IMAGE_FILENAME]" alt="[PROJECT_NAME] Hero Image" class="hero-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Rationale Section -->
+    <section class="project-rationale-section">
+        <div class="container">
+            <div class="rationale-content">
+                <h2 class="section-heading">Project Rationale</h2>
+                
+                <div class="rationale-text">
+                    <p class="rationale-paragraph">
+                        [RATIONALE_PARAGRAPH_1 - Overview of the project, its objectives, context, and what problem it addresses. Describe the purpose and goals of the project in detail.]
+                    </p>
+                    
+                    <p class="rationale-paragraph">
+                        [RATIONALE_PARAGRAPH_2 - Describe the challenges faced, the design/development process, key decisions made, and how they were addressed. Explain the approach taken and the reasoning behind design choices.]
+                    </p>
+                    
+                    <p class="rationale-paragraph">
+                        [RATIONALE_PARAGRAPH_3 - Discuss the outcomes, results, and what was learned from the project. Explain how the project achieved its goals and any insights gained.]
+                    </p>
+                </div>
+
+                <!-- Key Features / Highlights -->
+                <div class="project-highlights">
+                    <h3 class="highlights-heading">Key Features</h3>
+                    <ul class="highlights-list">
+                        <li class="highlight-item">[FEATURE_1]</li>
+                        <li class="highlight-item">[FEATURE_2]</li>
+                        <li class="highlight-item">[FEATURE_3]</li>
+                        <li class="highlight-item">[FEATURE_4]</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Visuals Gallery -->
+    <section class="project-visuals-section">
+        <div class="container">
+            <h2 class="section-heading">Project Visuals</h2>
+            
+            <div class="visuals-gallery">
+                <!-- Visual 1 -->
+                <div class="gallery-item">
+                    <div class="gallery-image-wrapper">
+                        <img src="/assets/[VISUAL_1_FILENAME]" alt="[VISUAL_1_DESCRIPTION]" class="gallery-image">
+                    </div>
+                    <p class="gallery-caption">[CAPTION_1]</p>
+                </div>
+
+                <!-- Visual 2 -->
+                <div class="gallery-item">
+                    <div class="gallery-image-wrapper">
+                        <img src="/assets/[VISUAL_2_FILENAME]" alt="[VISUAL_2_DESCRIPTION]" class="gallery-image">
+                    </div>
+                    <p class="gallery-caption">[CAPTION_2]</p>
+                </div>
+
+                <!-- Visual 3 -->
+                <div class="gallery-item">
+                    <div class="gallery-image-wrapper">
+                        <img src="/assets/[VISUAL_3_FILENAME]" alt="[VISUAL_3_DESCRIPTION]" class="gallery-image">
+                    </div>
+                    <p class="gallery-caption">[CAPTION_3]</p>
+                </div>
+
+                <!-- Visual 4 - Optional -->
+                <div class="gallery-item">
+                    <div class="gallery-image-wrapper">
+                        <img src="/assets/[VISUAL_4_FILENAME]" alt="[VISUAL_4_DESCRIPTION]" class="gallery-image">
+                    </div>
+                    <p class="gallery-caption">[CAPTION_4]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Links / Resources -->
+    <section class="project-resources-section">
+        <div class="container">
+            <div class="resources-content">
+                <h2 class="section-heading">Project Resources</h2>
+                
+                <div class="resource-links">
+                    <a href="[PDF_LINK]" target="_blank" rel="noopener noreferrer" class="resource-link">
+                        <span class="resource-icon">📄</span>
+                        <span class="resource-text">View PDF</span>
+                    </a>
+                    
+                    <a href="[RAW_FILE_LINK]" download class="resource-link">
+                        <span class="resource-icon">📦</span>
+                        <span class="resource-text">Download Raw File</span>
+                    </a>
+                    
+                    <a href="[GITHUB_LINK]" target="_blank" rel="noopener noreferrer" class="resource-link">
+                        <span class="resource-icon">🔗</span>
+                        <span class="resource-text">View on GitHub</span>
+                    </a>
+                    
+                    <a href="[LIVE_DEMO_LINK]" target="_blank" rel="noopener noreferrer" class="resource-link">
+                        <span class="resource-icon">🌐</span>
+                        <span class="resource-text">Live Demo</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 [BRAND_NAME]. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/donald-c-wong/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://github.com/DonaldCWong" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
