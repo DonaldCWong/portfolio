@@ -238,7 +238,7 @@ body.dark-mode .project-rationale {
 }
 
 .orb-1 {
-    top: 4%;
+    top: 6%;
     --orb-x: -10vw;
     --orb-rot: 12deg;
     animation-delay: -10s;
@@ -258,7 +258,7 @@ body.dark-mode .project-rationale {
 }
 
 .orb-3 {
-    top: 30%;
+    top: 26%;
     width: 120px;
     height: 120px;
     --orb-x: 18vw;
@@ -268,7 +268,7 @@ body.dark-mode .project-rationale {
 }
 
 .orb-4 {
-    top: 42%;
+    top: 36%;
     width: 130px;
     height: 130px;
     --orb-x: -2vw;
@@ -278,7 +278,7 @@ body.dark-mode .project-rationale {
 }
 
 .orb-5 {
-    top: 54%;
+    top: 46%;
     width: 130px;
     height: 130px;
     --orb-x: -20vw;
@@ -288,7 +288,7 @@ body.dark-mode .project-rationale {
 }
 
 .orb-6 {
-    top: 66%;
+    top: 56%;
     width: 140px;
     height: 140px;
     --orb-x: 6vw;
@@ -298,7 +298,7 @@ body.dark-mode .project-rationale {
 }
 
 .orb-7 {
-    top: 78%;
+    top: 66%;
     width: 120px;
     height: 120px;
     --orb-x: 22vw;
@@ -308,13 +308,53 @@ body.dark-mode .project-rationale {
 }
 
 .orb-8 {
-    top: 88%;
+    top: 76%;
     width: 110px;
     height: 110px;
     --orb-x: -6vw;
     --orb-rot: -14deg;
     animation-delay: -34s;
     background: radial-gradient(circle at 45% 55%, #4abfa1 0%, #0081c3 70%, #0081c3 100%);
+}
+
+.orb-9 {
+    top: 86%;
+    width: 120px;
+    height: 120px;
+    --orb-x: 14vw;
+    --orb-rot: 10deg;
+    animation-delay: -40s;
+    background: radial-gradient(circle at 30% 40%, #4abfa1 0%, #0081c3 70%, #0081c3 100%);
+}
+
+.orb-10 {
+    top: 94%;
+    width: 140px;
+    height: 140px;
+    --orb-x: -14vw;
+    --orb-rot: -26deg;
+    animation-delay: -48s;
+    background: radial-gradient(circle at 55% 45%, #4abfa1 0%, #0081c3 70%, #0081c3 100%);
+}
+
+.orb-11 {
+    top: 22%;
+    width: 110px;
+    height: 110px;
+    --orb-x: -26vw;
+    --orb-rot: 20deg;
+    animation-delay: -54s;
+    background: radial-gradient(circle at 35% 35%, #4abfa1 0%, #0081c3 70%, #0081c3 100%);
+}
+
+.orb-12 {
+    top: 72%;
+    width: 115px;
+    height: 115px;
+    --orb-x: 28vw;
+    --orb-rot: -12deg;
+    animation-delay: -60s;
+    background: radial-gradient(circle at 60% 40%, #4abfa1 0%, #0081c3 70%, #0081c3 100%);
 }
 
 .hero-title {
