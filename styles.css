@@ -218,78 +218,102 @@ body.dark-mode .project-rationale {
     transition: transform 0.3s ease;
     --scale: 1;
     --orb-rot: 0deg;
+    --orb-x: 0vw;
+    animation: drift-right 70s linear infinite;
     pointer-events: auto;
+    left: 0;
 }
 
 .hero-orb:hover {
     --scale: 1.06;
 }
 
+@keyframes drift-right {
+    from {
+        transform: translateX(calc(var(--orb-x) - 120vw)) rotate(var(--orb-rot)) scale(var(--scale));
+    }
+    to {
+        transform: translateX(calc(var(--orb-x) + 120vw)) rotate(var(--orb-rot)) scale(var(--scale));
+    }
+}
+
 .orb-1 {
-    top: 0;
-    left: 0;
-    transform: translate(-10%, -10%) rotate(12deg) scale(var(--scale));
+    top: 4%;
+    --orb-x: -10vw;
+    --orb-rot: 12deg;
+    animation-delay: -10s;
     background: radial-gradient(circle at 25% 25%, #4abfa1 0%, #0081c3 70%, #0081c3 100%);
+    width: 120px;
+    height: 120px;
 }
 
 .orb-2 {
-    bottom: 0;
-    right: 0;
-    transform: translate(10%, 10%) rotate(-18deg) scale(var(--scale));
+    top: 16%;
+    --orb-x: 8vw;
+    --orb-rot: -18deg;
+    animation-delay: -22s;
     background: radial-gradient(circle at 65% 35%, #4abfa1 0%, #0081c3 70%, #0081c3 100%);
+    width: 140px;
+    height: 140px;
 }
 
 .orb-3 {
-    top: 45%;
-    right: 0;
+    top: 30%;
     width: 120px;
     height: 120px;
-    transform: translate(15%, -50%) rotate(24deg) scale(var(--scale));
+    --orb-x: 18vw;
+    --orb-rot: 24deg;
+    animation-delay: -30s;
     background: radial-gradient(circle at 35% 60%, #4abfa1 0%, #0081c3 70%, #0081c3 100%);
 }
 
 .orb-4 {
-    top: 10%;
-    right: 25%;
+    top: 42%;
     width: 130px;
     height: 130px;
-    transform: translate(10%, -20%) rotate(-9deg) scale(var(--scale));
+    --orb-x: -2vw;
+    --orb-rot: -9deg;
+    animation-delay: -18s;
     background: radial-gradient(circle at 40% 25%, #4abfa1 0%, #0081c3 70%, #0081c3 100%);
 }
 
 .orb-5 {
-    bottom: 10%;
-    left: 20%;
+    top: 54%;
     width: 130px;
     height: 130px;
-    transform: translate(-15%, 20%) rotate(16deg) scale(var(--scale));
+    --orb-x: -20vw;
+    --orb-rot: 16deg;
+    animation-delay: -6s;
     background: radial-gradient(circle at 60% 40%, #4abfa1 0%, #0081c3 70%, #0081c3 100%);
 }
 
 .orb-6 {
-    top: 18%;
-    left: 28%;
+    top: 66%;
     width: 140px;
     height: 140px;
-    transform: translate(-20%, -30%) rotate(-22deg) scale(var(--scale));
+    --orb-x: 6vw;
+    --orb-rot: -22deg;
+    animation-delay: -26s;
     background: radial-gradient(circle at 35% 35%, #4abfa1 0%, #0081c3 70%, #0081c3 100%);
 }
 
 .orb-7 {
-    bottom: 18%;
-    right: 22%;
+    top: 78%;
     width: 120px;
     height: 120px;
-    transform: translate(20%, 10%) rotate(28deg) scale(var(--scale));
+    --orb-x: 22vw;
+    --orb-rot: 28deg;
+    animation-delay: -14s;
     background: radial-gradient(circle at 55% 35%, #4abfa1 0%, #0081c3 70%, #0081c3 100%);
 }
 
 .orb-8 {
-    top: 60%;
-    left: 6%;
+    top: 88%;
     width: 110px;
     height: 110px;
-    transform: translate(-20%, -30%) rotate(-14deg) scale(var(--scale));
+    --orb-x: -6vw;
+    --orb-rot: -14deg;
+    animation-delay: -34s;
     background: radial-gradient(circle at 45% 55%, #4abfa1 0%, #0081c3 70%, #0081c3 100%);
 }
 
