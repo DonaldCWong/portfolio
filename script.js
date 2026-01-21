@@ -47,3 +47,26 @@ document.querySelectorAll('.project').forEach(project => {
     observer.observe(project);
 });
 
+const themeToggle = document.querySelector('.theme-toggle');
+
+const setTheme = (isDark) => {
+    document.body.classList.toggle('dark-mode', isDark);
+    if (themeToggle) {
+        themeToggle.setAttribute('aria-pressed', String(isDark));
+        themeToggle.textContent = isDark ? 'Light Mode' : 'Dark Mode';
+    }
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+};
+
+if (themeToggle) {
+    const storedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const shouldUseDark = storedTheme ? storedTheme === 'dark' : prefersDark;
+    setTheme(shouldUseDark);
+
+    themeToggle.addEventListener('click', () => {
+        const isDark = document.body.classList.contains('dark-mode');
+        setTheme(!isDark);
+    });
+}
+
